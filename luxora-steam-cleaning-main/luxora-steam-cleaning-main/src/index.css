@@ -1,0 +1,147 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 99%;
+    --foreground: 222 47% 11%;
+    --muted: 210 25% 95%;
+    --muted-foreground: 215 16% 47%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --border: 214 20% 90%;
+    --input: 214 20% 90%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --primary: 221 83% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 47% 11%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 221 83% 40%;
+
+    --radius: 0.875rem;
+
+    --chart-1: 221 83% 53%;
+    --chart-2: 212 95% 68%;
+    --chart-3: 216 92% 60%;
+    --chart-4: 210 98% 78%;
+    --chart-5: 212 97% 87%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 221 83% 40%;
+
+    --font-sans: 'Manrope', 'Inter', sans-serif;
+    --font-mono: 'Courier New', monospace;
+
+    --shadow-x: 0px;
+    --shadow-y: 4px;
+    --shadow-blur: 16px;
+    --shadow-spread: -2px;
+    --shadow-opacity: 0.06;
+    --shadow-color: #1e3a5f;
+
+    --shadow-2xs: var(--shadow-x) var(--shadow-y) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+    --shadow-xs: var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-spread) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+    --shadow-sm: var(--shadow-x) var(--shadow-y) calc(var(--shadow-blur) * 1.5) var(--shadow-spread) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+    --shadow-md: calc(var(--shadow-x) * 2) calc(var(--shadow-y) * 2) calc(var(--shadow-blur) * 3) calc(var(--shadow-spread) - 1px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+    --shadow-lg: calc(var(--shadow-x) * 4) calc(var(--shadow-y) * 4) calc(var(--shadow-blur) * 5) calc(var(--shadow-spread) - 3px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+    --shadow-xl: calc(var(--shadow-x) * 6) calc(var(--shadow-y) * 6) calc(var(--shadow-blur) * 7) calc(var(--shadow-spread) - 5px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+    --shadow-2xl: calc(var(--shadow-x) * 8) calc(var(--shadow-y) * 8) calc(max(0px, var(--shadow-blur) * 9 - 8px)) calc(var(--shadow-spread) - 12px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 250%), transparent);
+    --shadow: var(--shadow-md);
+  }
+
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 20% 92%;
+    --muted: 222 30% 12%;
+    --muted-foreground: 215 16% 55%;
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 20% 92%;
+    --border: 222 20% 16%;
+    --input: 222 20% 16%;
+    --card: 222 40% 9%;
+    --card-foreground: 210 20% 92%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 30% 14%;
+    --secondary-foreground: 210 20% 92%;
+    --accent: 222 30% 12%;
+    --accent-foreground: 210 20% 92%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 221 83% 53%;
+
+    --chart-1: 221 83% 60%;
+    --chart-2: 212 95% 70%;
+    --chart-3: 216 92% 65%;
+    --chart-4: 210 98% 75%;
+    --chart-5: 212 97% 80%;
+
+    --shadow-opacity: 0.3;
+    --shadow-color: #000000;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground transition-colors duration-300;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Light mode glass */
+:root .glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+:root .glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Dark mode glass */
+.dark .glass {
+  background: rgba(15, 20, 35, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark .glass-card {
+  background: rgba(20, 28, 50, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-dark {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
