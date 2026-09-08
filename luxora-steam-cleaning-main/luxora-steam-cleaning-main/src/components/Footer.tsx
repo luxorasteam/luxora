@@ -71,7 +71,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/30">
-          <p>© 2025 Luxora Steam Cleaning Ltd. All Rights Reserved.</p>
+          <p>© 2026 Luxora Steam Cleaning Ltd. All Rights Reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms & Conditions</a>
