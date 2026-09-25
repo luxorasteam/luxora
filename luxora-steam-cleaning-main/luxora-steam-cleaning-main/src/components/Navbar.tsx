@@ -1,24 +1,27 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import { Menu, X, Phone, Mail, MapPin, Clock, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LuxoraLogo } from "./Icons";
 import ThemeToggle from "./ThemeToggle";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const serviceLinks = [
-  { label: "Carpet Cleaning",       slug: "carpet-cleaning"       },
-  { label: "Sofa Cleaning",         slug: "sofa-cleaning"         },
-  { label: "Mattress Cleaning",     slug: "mattress-cleaning"     },
-  { label: "Curtain Cleaning",      slug: "curtain-cleaning"      },
-  { label: "Chair & Dining Cleaning", slug: "chair-dining-cleaning" },
+  { label: "Carpet Cleaning",         slug: "carpet-cleaning"        },
+  { label: "Sofa Cleaning",           slug: "sofa-cleaning"          },
+  { label: "Mattress Cleaning",       slug: "mattress-cleaning"      },
+  { label: "Curtain Cleaning",        slug: "curtain-cleaning"       },
+  { label: "Chair & Dining Cleaning", slug: "chair-dining-cleaning"  },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled]       = useState(false);
   const [mobileOpen, setMobileOpen]   = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const { pathname } = useLocation();
+  const pathname = usePathname();
   const isHome = pathname === "/";
 
   useEffect(() => {
@@ -49,20 +52,19 @@ export default function Navbar() {
       {/* Main nav */}
       <nav className="sticky top-0 z-50 transition-all duration-500 glass shadow-lg">
         <div className="container mx-auto px-6 flex items-center justify-between h-16 lg:h-20">
-          <Link to="/"><LuxoraLogo /></Link>
+          <Link href="/"><LuxoraLogo /></Link>
 
           {/* Desktop links */}
           <div className="hidden lg:flex items-center gap-8">
-
-            {/* Home */}
-            <Link to="/" className="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors">Home</Link>
+            <Link href="/" className="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors">Home</Link>
 
             {/* Services dropdown */}
-            <div className="relative"
+            <div
+              className="relative"
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
             >
-              <Link to="/services" className="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors flex items-center gap-1">
+              <Link href="/services" className="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors flex items-center gap-1">
                 Services <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`} />
               </Link>
               <AnimatePresence>
@@ -78,7 +80,7 @@ export default function Navbar() {
                       {serviceLinks.map((s) => (
                         <Link
                           key={s.slug}
-                          to={`/services/${s.slug}`}
+                          href={`/services/${s.slug}`}
                           className="block px-4 py-2.5 text-sm text-foreground/70 hover:bg-primary/5 hover:text-primary rounded-lg transition-all"
                           onClick={() => setDropdownOpen(false)}
                         >
@@ -87,7 +89,7 @@ export default function Navbar() {
                       ))}
                       <div className="border-t border-border/40 mt-1 pt-1">
                         <Link
-                          to="/services"
+                          href="/services"
                           className="block px-4 py-2.5 text-sm font-semibold text-primary hover:bg-primary/5 rounded-lg transition-all"
                           onClick={() => setDropdownOpen(false)}
                         >
@@ -133,10 +135,10 @@ export default function Navbar() {
               className="lg:hidden overflow-hidden glass border-t border-border/30"
             >
               <div className="p-6 space-y-4">
-                <Link to="/" onClick={() => setMobileOpen(false)} className="block text-base font-semibold text-foreground/70 hover:text-primary py-2">Home</Link>
-                <Link to="/services" onClick={() => setMobileOpen(false)} className="block text-base font-semibold text-foreground/70 hover:text-primary py-2">All Services</Link>
+                <Link href="/" onClick={() => setMobileOpen(false)} className="block text-base font-semibold text-foreground/70 hover:text-primary py-2">Home</Link>
+                <Link href="/services" onClick={() => setMobileOpen(false)} className="block text-base font-semibold text-foreground/70 hover:text-primary py-2">All Services</Link>
                 {serviceLinks.map((s) => (
-                  <Link key={s.slug} to={`/services/${s.slug}`} onClick={() => setMobileOpen(false)}
+                  <Link key={s.slug} href={`/services/${s.slug}`} onClick={() => setMobileOpen(false)}
                     className="block text-sm text-foreground/50 hover:text-primary pl-4 py-1">
                     {s.label}
                   </Link>

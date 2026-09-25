@@ -1,13 +1,15 @@
+"use client";
+
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { LuxoraLogo, WhatsAppIcon } from "./Icons";
 
 const services = [
-  { label: "Carpet Cleaning",        slug: "carpet-cleaning"        },
-  { label: "Sofa Cleaning",          slug: "sofa-cleaning"          },
-  { label: "Mattress Cleaning",      slug: "mattress-cleaning"      },
-  { label: "Curtains Cleaning",      slug: "curtain-cleaning"       },
-  { label: "Chair & Dining Cleaning",slug: "chair-dining-cleaning"  },
+  { label: "Carpet Cleaning",         slug: "carpet-cleaning"        },
+  { label: "Sofa Cleaning",           slug: "sofa-cleaning"          },
+  { label: "Mattress Cleaning",       slug: "mattress-cleaning"      },
+  { label: "Curtains Cleaning",       slug: "curtain-cleaning"       },
+  { label: "Chair & Dining Cleaning", slug: "chair-dining-cleaning"  },
 ];
 
 export default function Footer() {
@@ -34,9 +36,9 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-white mb-5">Quick Links</h4>
             <ul className="space-y-3">
-              <li><Link to="/" className="text-white/50 hover:text-white text-sm transition-colors">Home</Link></li>
+              <li><Link href="/" className="text-white/50 hover:text-white text-sm transition-colors">Home</Link></li>
               <li><a href="/#why-choose-us" className="text-white/50 hover:text-white text-sm transition-colors">About Us</a></li>
-              <li><Link to="/services" className="text-white/50 hover:text-white text-sm transition-colors">Services</Link></li>
+              <li><Link href="/services" className="text-white/50 hover:text-white text-sm transition-colors">Services</Link></li>
               <li><a href="/#gallery" className="text-white/50 hover:text-white text-sm transition-colors">Gallery</a></li>
               <li><a href="/#contact" className="text-white/50 hover:text-white text-sm transition-colors">Contact</a></li>
             </ul>
@@ -48,7 +50,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {services.map((s) => (
                 <li key={s.slug}>
-                  <Link to={`/services/${s.slug}`} className="text-white/50 hover:text-white text-sm transition-colors">
+                  <Link href={`/services/${s.slug}`} className="text-white/50 hover:text-white text-sm transition-colors">
                     {s.label}
                   </Link>
                 </li>
@@ -74,7 +76,7 @@ export default function Footer() {
           <p>© 2027 Luxora Steam Cleaning Ltd. All Rights Reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms & Conditions</a>
+            <a href="#" className="hover:text-white transition-colors">Terms &amp; Conditions</a>
           </div>
         </div>
       </div>

@@ -1,20 +1,16 @@
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import FloatingButtons from "../components/FloatingButtons";
-import Contact from "../components/Contact";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import FloatingButtons from "./FloatingButtons";
+import Contact from "./Contact";
 import { services } from "../data/services";
 
-export default function ServicesPage() {
-  useEffect(() => {
-    document.title = "Our Services | Luxora Steam Cleaning Ltd";
-    window.scrollTo(0, 0);
-  }, []);
-
+export default function ServicesPageClient() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -58,6 +54,7 @@ export default function ServicesPage() {
                 className="group glass-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
               >
                 <div className="h-56 overflow-hidden relative">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={s.heroImage}
                     alt={s.title}
@@ -72,7 +69,7 @@ export default function ServicesPage() {
                   <h2 className="font-bold text-xl mb-2">{s.title}</h2>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-6">{s.shortDesc}</p>
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <Link to={`/services/${s.slug}`} className="flex-1">
+                    <Link href={`/services/${s.slug}`} className="flex-1">
                       <Button className="w-full gap-2 rounded-xl" size="sm">
                         Explore More <ArrowRight className="w-4 h-4" />
                       </Button>

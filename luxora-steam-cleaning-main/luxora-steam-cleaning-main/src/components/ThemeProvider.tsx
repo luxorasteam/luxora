@@ -1,3 +1,5 @@
+"use client";
+
 import { createContext, useContext, useState, useEffect, type ReactNode } from "react";
 
 type Theme = "light" | "dark";
@@ -12,14 +14,17 @@ export function useTheme() {
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>(() => {
-    if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("luxora-theme") as Theme;
-      if (saved) return saved;
-      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  const [theme, setTheme] = useState<Theme>("light");
+
+  // Read stored preference on mount (avoids SSR mismatch)
+  useEffect(() => {
+    const saved = localStorage.getItem("luxora-theme") as Theme | null;
+    if (saved) {
+      setTheme(saved);
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
     }
-    return "light";
-  });
+  }, []);
 
   useEffect(() => {
     const root = document.documentElement;
