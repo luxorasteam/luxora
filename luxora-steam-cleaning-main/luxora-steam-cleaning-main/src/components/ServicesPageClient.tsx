@@ -24,7 +24,7 @@ export default function ServicesPageClient() {
             <h1 className="text-4xl md:text-6xl font-extrabold mb-6">Professional Cleaning Services</h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
               Industry-leading steam cleaning solutions for homes and businesses across the UK.
-              Affordable prices, guaranteed results, available 24/7.
+              Guaranteed results, available 24/7.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a href="/#contact">
@@ -61,9 +61,6 @@ export default function ServicesPageClient() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />
-                  <div className="absolute top-4 right-4 glass-dark rounded-full px-4 py-1.5">
-                    <span className="text-white font-bold text-sm">{s.price}</span>
-                  </div>
                 </div>
                 <div className="p-6">
                   <h2 className="font-bold text-xl mb-2">{s.title}</h2>
