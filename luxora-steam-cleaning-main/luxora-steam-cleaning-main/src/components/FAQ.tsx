@@ -4,7 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { motion } from "framer-motion";
 
 const faqs = [
-  { q: "How much does carpet cleaning cost?", a: "Our carpet cleaning starts from £79. The final price depends on the size of the area, level of soiling, and any additional treatments required. Sofa cleaning also starts from £79, mattress cleaning from £69, curtains cleaning from £79, and chair & dining cleaning from £79. Contact us for a free, no-obligation quote." },
+  { q: "How do I get a price for cleaning?", a: "We provide free, no-obligation quotes tailored to your specific requirements. The cost depends on the size of the area, level of soiling, and any additional treatments needed. Contact us to get a personalised quote." },
   { q: "Are your cleaning products safe for children and pets?", a: "Absolutely. We use eco-friendly, non-toxic cleaning solutions that are safe for children, pets, and people with allergies. Our products are biodegradable and environmentally responsible." },
   { q: "How long does the cleaning process take?", a: "Most residential cleaning sessions take between 1-3 hours depending on the size of the property and services requested. We always arrive on time and work efficiently." },
   { q: "Do I need to be home during the cleaning?", a: "You don't have to be home. Many of our clients provide access arrangements. However, we recommend being present for the initial visit so we can discuss your specific requirements." },

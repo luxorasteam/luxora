@@ -7,7 +7,7 @@ import "../index.css";
 export const metadata: Metadata = {
   title: "Luxora Steam Cleaning Ltd – Professional Steam Cleaning Huddersfield",
   description:
-    "Professional steam cleaning services in Huddersfield, Halifax and Bradford. Carpet, sofa, mattress and deep cleaning from £69. Call 07543 958332.",
+    "Professional steam cleaning services in Huddersfield, Halifax and Bradford. Carpet, sofa, mattress and deep cleaning. Call 07543 958332 for a free quote.",
 };
 
 export const viewport: Viewport = {

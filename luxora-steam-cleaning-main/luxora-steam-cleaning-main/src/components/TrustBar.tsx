@@ -1,13 +1,13 @@
 "use client";
 
-import { ShieldCheck, Leaf, Award, BadgePoundSterling } from "lucide-react";
+import { ShieldCheck, Leaf, Award, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 
 const items = [
   { icon: ShieldCheck, title: "100% Satisfaction", sub: "Guaranteed" },
   { icon: Leaf, title: "Eco-Friendly", sub: "Cleaning Solutions" },
   { icon: Award, title: "Trained & Insured", sub: "Professionals" },
-  { icon: BadgePoundSterling, title: "Affordable", sub: "Pricing" },
+  { icon: Clock, title: "Fast Drying", sub: "2 to 4 Hours" },
 ];
 
 export default function TrustBar() {

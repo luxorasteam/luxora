@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Phone, CheckCircle2, ChevronDown, Zap, Leaf, Clock, BadgePoundSterling, Wrench, ThumbsUp } from "lucide-react";
+import { ArrowLeft, ArrowRight, Phone, CheckCircle2, ChevronDown, Zap, Leaf, Clock, Wrench, ThumbsUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Navbar from "./Navbar";
@@ -15,7 +15,7 @@ const whyCards = [
   { icon: Wrench,             title: "Expert Technicians",    desc: "Fully trained, DBS checked and insured professionals." },
   { icon: Leaf,               title: "Eco-Friendly Products", desc: "Biodegradable, non-toxic — safe for children and pets." },
   { icon: Zap,                title: "Fast Drying",           desc: "Most surfaces dry within 2 to 4 hours." },
-  { icon: BadgePoundSterling, title: "Affordable Pricing",    desc: "Premium results at transparent, competitive prices." },
+  { icon: Clock,              title: "Fast Turnaround",       desc: "Quick, efficient service with minimal disruption." },
   { icon: Wrench,             title: "Professional Equipment",desc: "Industrial-grade steam machines up to 180°C." },
   { icon: ThumbsUp,           title: "100% Satisfaction",     desc: "Not happy? We return and re-clean at no extra cost." },
 ];
@@ -41,9 +41,6 @@ export default function ServiceLayout({ service }: { service: ServiceData }) {
             <Link href="/services" className="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm mb-6 transition-colors">
               <ArrowLeft className="w-4 h-4" /> All Services
             </Link>
-            <div className="inline-block glass-dark rounded-full px-4 py-1.5 mb-4">
-              <span className="text-white font-bold text-sm">{service.price}</span>
-            </div>
             <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">{service.title}</h1>
             <p className="text-lg text-white/70 max-w-xl mb-8">{service.shortDesc}</p>
             <div className="flex flex-wrap gap-4">

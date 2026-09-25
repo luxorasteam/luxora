@@ -5,8 +5,6 @@ export interface ServiceData {
   id: string;
   title: string;
   slug: string;
-  price: string;
-  priceValue: number;
   shortDesc: string;
   fullDesc: string;
   benefits: string[];
@@ -23,8 +21,6 @@ export const services: ServiceData[] = [
     id: "carpet-cleaning",
     title: "Carpet Cleaning",
     slug: "carpet-cleaning",
-    price: "From £79",
-    priceValue: 79,
     shortDesc: "Deep steam cleaning to remove dirt, stains and allergens. We restore your carpets to like-new condition.",
     fullDesc: "Our professional carpet cleaning service uses advanced hot water extraction technology combined with specialist cleaning agents to deliver a truly deep clean. Whether your carpets have suffered everyday foot traffic, pet-related staining or accumulated allergens over time, our certified technicians restore them to their best possible condition — leaving your home healthier, fresher and genuinely cleaner.",
     benefits: ["Residential & commercial properties", "Safe for children and pets", "Eco-friendly, non-toxic solutions", "Advanced steam extraction technology", "Allergen & dust mite removal", "Stain & odour elimination", "Fast drying — 2 to 4 hours", "100% satisfaction guaranteed"],
@@ -43,14 +39,12 @@ export const services: ServiceData[] = [
       { q: "How often should carpets be professionally cleaned?", a: "We recommend every 6 to 12 months for most households — more frequently in homes with pets, children or high foot traffic." },
       { q: "Do I need to move furniture before the clean?", a: "We ask you to clear small items and breakables. Our team handles larger, heavier pieces where possible." },
     ],
-    seo: { title: "Carpet Cleaning Services | Luxora Steam Cleaning Ltd", description: "Professional carpet steam cleaning from £79. Deep stain removal, allergen extraction and odour neutralisation across the UK. Book your free quote today." },
+    seo: { title: "Carpet Cleaning Services | Luxora Steam Cleaning Ltd", description: "Professional carpet steam cleaning. Deep stain removal, allergen extraction and odour neutralisation across the UK. Book your free quote today." },
   },
   {
     id: "sofa-cleaning",
     title: "Sofa Cleaning",
     slug: "sofa-cleaning",
-    price: "From £79",
-    priceValue: 79,
     shortDesc: "Professional sofa and upholstery steam cleaning to refresh and revitalise your furniture.",
     fullDesc: "Your sofa is one of the most frequently used items in your home — and one of the most overlooked when it comes to cleaning. Over time, sofas accumulate body oils, dust mites, food particles, pet dander and bacteria deep within the fabric. Our professional sofa cleaning service restores your upholstery to a hygienic, fresh condition using safe, fabric-appropriate steam cleaning techniques.",
     benefits: ["All fabric types treated", "Leather & faux leather care", "Pet hair & dander removal", "Dust mite elimination", "Body oil & grease removal", "Colour-safe process", "Fast drying — 2 to 4 hours", "Eco-friendly solutions"],
@@ -69,14 +63,12 @@ export const services: ServiceData[] = [
       { q: "Can you clean leather sofas?", a: "Yes. We use specialist leather cleaning and conditioning products that safely clean the surface while preserving its texture and appearance." },
       { q: "Will the cleaning affect my sofa's colour?", a: "Our colour-safe process is designed to maintain fabric integrity. We carry out a small patch test before proceeding on any delicate or unfamiliar material." },
     ],
-    seo: { title: "Sofa & Upholstery Cleaning | Luxora Steam Cleaning Ltd", description: "Professional sofa steam cleaning from £79. Fabric and leather care, allergen removal and stain treatment across the UK. Free quote available." },
+    seo: { title: "Sofa & Upholstery Cleaning | Luxora Steam Cleaning Ltd", description: "Professional sofa steam cleaning. Fabric and leather care, allergen removal and stain treatment across the UK. Free quote available." },
   },
   {
     id: "mattress-cleaning",
     title: "Mattress Cleaning",
     slug: "mattress-cleaning",
-    price: "From £69",
-    priceValue: 69,
     shortDesc: "Professional mattress sanitisation and deep steam cleaning for a healthier, fresher sleep.",
     fullDesc: "We spend approximately a third of our lives in bed — yet mattresses are among the least frequently cleaned items in most homes. Over time, mattresses accumulate dust mites, dead skin cells, sweat residue, allergens and bacteria that can affect both sleep quality and overall health. Our professional mattress cleaning service deep cleans and sanitises your mattress, creating a genuinely healthier sleeping environment.",
     benefits: ["Memory foam & pocket sprung", "Dust mite elimination", "Allergen extraction", "Bacteria & mould removal", "Odour neutralisation", "Safe for all mattress types", "Sleep-safe same night", "Eco-friendly solutions"],
@@ -95,14 +87,12 @@ export const services: ServiceData[] = [
       { q: "How often should mattresses be professionally cleaned?", a: "We recommend once or twice a year for most households — more frequently for those with allergies, young children or pets." },
       { q: "Do you clean all mattress types?", a: "Yes, including memory foam, pocket sprung, latex and hybrid mattresses. We adjust our technique to suit each material." },
     ],
-    seo: { title: "Mattress Cleaning Services | Luxora Steam Cleaning Ltd", description: "Professional mattress steam cleaning from £69. Dust mite removal, allergen extraction and deep sanitisation across the UK. Book a free quote." },
+    seo: { title: "Mattress Cleaning Services | Luxora Steam Cleaning Ltd", description: "Professional mattress steam cleaning. Dust mite removal, allergen extraction and deep sanitisation across the UK. Book a free quote." },
   },
   {
     id: "curtain-cleaning",
     title: "Curtain Cleaning",
     slug: "curtain-cleaning",
-    price: "From £79",
-    priceValue: 79,
     shortDesc: "Specialist curtain steam cleaning that removes dust, allergens and odours without taking them down.",
     fullDesc: "Curtains play a significant role in the atmosphere of any room, but they are often neglected when it comes to regular cleaning. Hanging fabric collects dust, allergens, cooking residue and airborne pollutants continuously. Our in-situ curtain cleaning service refreshes your curtains professionally without the need to take them down, saving time while delivering excellent results.",
     benefits: ["No need to remove curtains", "All fabric types treated", "Dust & pollen removal", "Cooking odour elimination", "Prevents shrinkage & fading", "Velvet, linen & polyester", "Safe for lined curtains", "Eco-friendly process"],
@@ -121,14 +111,12 @@ export const services: ServiceData[] = [
       { q: "How long do curtains take to dry?", a: "Most curtains dry within 1 to 3 hours depending on fabric weight and room ventilation." },
       { q: "Can you remove smoke or cooking odours from curtains?", a: "Yes. Our deodorisation process is highly effective at neutralising smoke, cooking and pet odours from curtain fabrics." },
     ],
-    seo: { title: "Curtain Cleaning Services | Luxora Steam Cleaning Ltd", description: "Professional in-situ curtain steam cleaning from £79. No need to take them down. Dust, allergen and odour removal across the UK. Free quote." },
+    seo: { title: "Curtain Cleaning Services | Luxora Steam Cleaning Ltd", description: "Professional in-situ curtain steam cleaning. No need to take them down. Dust, allergen and odour removal across the UK. Free quote." },
   },
   {
     id: "chair-dining-cleaning",
     title: "Chair & Dining Cleaning",
     slug: "chair-dining-cleaning",
-    price: "From £79",
-    priceValue: 79,
     shortDesc: "Expert steam cleaning for dining chairs and upholstered seating — fresh, hygienic and like new.",
     fullDesc: "Dining chairs and upholstered seating accumulate food residue, grease, body oils and everyday staining that regular wiping simply cannot address. Our professional chair and dining cleaning service uses targeted steam treatment and extraction to deep clean upholstered dining chairs, armchairs and occasional seating — restoring them to a hygienic, presentable condition.",
     benefits: ["Entire dining sets cleaned", "Food & grease removal", "Fabric & vinyl treated", "Bacteria elimination", "Odour neutralisation", "Stain pre-treatment", "Fast 15-30 min per chair", "Safe for all households"],
@@ -147,7 +135,7 @@ export const services: ServiceData[] = [
       { q: "Do you clean wooden or metal chair frames too?", a: "Our service focuses on upholstered surfaces. We can wipe down chair frames as part of the service at no extra charge." },
       { q: "How long until the chairs are dry?", a: "Most dining chairs are dry within 1 to 2 hours. We recommend leaving them in a well-ventilated area after cleaning." },
     ],
-    seo: { title: "Chair & Dining Cleaning Services | Luxora Steam Cleaning Ltd", description: "Professional chair and dining upholstery cleaning from £79. Stain, grease and odour removal. Serving the UK. Book your free quote today." },
+    seo: { title: "Chair & Dining Cleaning Services | Luxora Steam Cleaning Ltd", description: "Professional chair and dining upholstery cleaning. Stain, grease and odour removal. Serving the UK. Book your free quote today." },
   },
 ];
 

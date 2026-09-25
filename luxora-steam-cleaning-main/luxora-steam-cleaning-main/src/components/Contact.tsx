@@ -134,7 +134,7 @@ export default function Contact() {
                 </div>
               ))}
               <a
-                href="https://wa.me/447543958332?text=Hi%20Luxora%20Steam%20Cleaning!%20I%27d%20like%20to%20book%20a%20cleaning%20service.%20Please%20let%20me%20know%20your%20availability%20and%20prices.%20Thanks!"
+                href="https://wa.me/447543958332?text=Hi%20Luxora%20Steam%20Cleaning!%20I%27d%20like%20to%20book%20a%20cleaning%20service.%20Please%20let%20me%20know%20your%20availability.%20Thanks!"
                 target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-3 p-3 rounded-xl transition-colors hover:bg-accent"
                 style={{ color: "#25D366" }}
