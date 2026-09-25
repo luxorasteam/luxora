@@ -1,3 +1,5 @@
+"use client";
+
 import { CheckCircle2, ArrowRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";

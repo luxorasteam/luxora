@@ -1,3 +1,5 @@
+"use client";
+
 import { ShieldCheck, Leaf, Award, BadgePoundSterling } from "lucide-react";
 import { motion } from "framer-motion";
 

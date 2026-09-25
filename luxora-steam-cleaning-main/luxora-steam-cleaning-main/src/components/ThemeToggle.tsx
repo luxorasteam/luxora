@@ -1,3 +1,5 @@
+"use client";
+
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 import { motion } from "framer-motion";
@@ -14,14 +16,11 @@ export default function ThemeToggle({ className }: { className?: string }) {
         isDark ? "bg-primary/20 border border-primary/30" : "bg-muted border border-border"
       } ${className || ""}`}
     >
-      {/* Sliding circle */}
       <motion.div
         layout
         transition={{ type: "spring", stiffness: 500, damping: 30 }}
         className={`w-6 h-6 rounded-full flex items-center justify-center shadow-sm ${
-          isDark
-            ? "bg-primary ml-auto"
-            : "bg-white ml-0"
+          isDark ? "bg-primary ml-auto" : "bg-white ml-0"
         }`}
       >
         {isDark ? (

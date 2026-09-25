@@ -1,3 +1,5 @@
+"use client";
+
 import { Phone, MapPin, Sparkles, Smile } from "lucide-react";
 import { motion } from "framer-motion";
 

@@ -1,0 +1,16 @@
+# dependencies
+node_modules/
+.npm
+
+# next.js
+.next/
+out/
+build/
+
+# env files
+.env*.local
+.env
+
+# misc
+.DS_Store
+*.pem
