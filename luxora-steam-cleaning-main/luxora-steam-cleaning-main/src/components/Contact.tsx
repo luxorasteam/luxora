@@ -150,9 +150,9 @@ export default function Contact() {
             </div>
             <div className="rounded-2xl overflow-hidden shadow-sm border border-border/50">
               <iframe
-                title="Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2366.5!2d-1.8!3d53.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDM5JzAwLjAiTiAxwrA0OCcwMC4wIlc!5e0!3m2!1sen!2suk!4v1600000000000"
-                className="w-full h-48" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+                title="Luxora Steam Cleaning Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371347.0864065653!2d-4.956728912438934!3d54.51994153819162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2aae2ac6b4f1b147%3A0x27960a50bbcaaba3!2sLuxora%20Steam%20Cleaning%20ltd!5e0!3m2!1sen!2s!4v1790504488703!5m2!1sen!2s"
+                className="w-full h-48" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="strict-origin-when-cross-origin"
               />
             </div>
           </motion.div>
