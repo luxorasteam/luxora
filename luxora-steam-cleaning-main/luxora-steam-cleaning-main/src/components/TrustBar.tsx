@@ -4,7 +4,7 @@ import { ShieldCheck, Leaf, Award, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 
 const items = [
-  { icon: ShieldCheck, title: "100% Satisfaction", sub: "Guaranteed" },
+  { icon: ShieldCheck, title: "Satisfaction Focused", sub: "Re-clean if needed" },
   { icon: Leaf, title: "Eco-Friendly", sub: "Cleaning Solutions" },
   { icon: Award, title: "Trained & Insured", sub: "Professionals" },
   { icon: Clock, title: "Fast Drying", sub: "2 to 4 Hours" },
@@ -12,7 +12,7 @@ const items = [
 
 export default function TrustBar() {
   return (
-    <section id="trust" className="relative -mt-16 z-10 px-6">
+    <section id="trust" className="relative z-10 px-6 -mt-20 md:-mt-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

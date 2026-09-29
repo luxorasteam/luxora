@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative w-full h-[100vh] min-h-[600px]">
+    <section id="home" className="relative w-full min-h-screen pb-24">
       <img
         src="https://images.fillout.com/764675/9ea7pkyjur/generated-images/14UfjHpWvkDnyCWvt4ZpMz/img_-hq-KpZlsD2L1xc5.jpg"
         alt="Luxurious clean living space"
@@ -14,7 +14,7 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/20" />
 
-      <div className="relative h-full flex flex-col justify-center px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
+      <div className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 max-w-7xl mx-auto pt-24 md:pt-28 pb-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="mt-12 flex gap-8 md:gap-12"
+            className="mt-8 flex gap-8 md:gap-12"
           >
             {[
               { num: "15+", label: "Years Experience" },
