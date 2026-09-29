@@ -36,7 +36,7 @@ export default function Testimonials() {
           className="text-center mb-14"
         >
           <p className="text-primary font-semibold text-sm tracking-[0.15em] uppercase mb-3">What Our Clients Say</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold">Trusted By Hundreds Of Happy Customers</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold">What Our Clients Say</h2>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">

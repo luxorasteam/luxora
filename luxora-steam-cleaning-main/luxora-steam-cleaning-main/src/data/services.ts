@@ -23,7 +23,7 @@ export const services: ServiceData[] = [
     slug: "carpet-cleaning",
     shortDesc: "Deep steam cleaning to remove dirt, stains and allergens. We restore your carpets to like-new condition.",
     fullDesc: "Our professional carpet cleaning service uses advanced hot water extraction technology combined with specialist cleaning agents to deliver a truly deep clean. Whether your carpets have suffered everyday foot traffic, pet-related staining or accumulated allergens over time, our certified technicians restore them to their best possible condition — leaving your home healthier, fresher and genuinely cleaner.",
-    benefits: ["Residential & commercial properties", "Safe for children and pets", "Eco-friendly, non-toxic solutions", "Advanced steam extraction technology", "Allergen & dust mite removal", "Stain & odour elimination", "Fast drying — 2 to 4 hours", "100% satisfaction guaranteed"],
+    benefits: ["Residential & commercial properties", "Safe for children and pets", "Eco-friendly, non-toxic solutions", "Advanced steam extraction technology", "Allergen & dust mite removal", "Stain & odour elimination", "Fast drying — 2 to 4 hours", "Satisfaction focused service"],
     heroImage: "/images/services/carpet-services-section.jpg",
     supportingImage: "/images/gallery/gallery-1.jpg",
     contentImage: "/images/gallery/gallery-2.jpg",

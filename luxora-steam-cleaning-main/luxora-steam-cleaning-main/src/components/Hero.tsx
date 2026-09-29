@@ -32,21 +32,21 @@ export default function Hero() {
           </motion.div>
 
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white leading-[1.1]">
-            It is time<br />to make things<br />
-            <span className="bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent">Nice n Clean.</span>
+            Steam Cleaning<br />Services for<br />
+            <span className="bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent">Homes &amp; Businesses</span>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-white/70 max-w-lg leading-relaxed">
-            Premium steam cleaning solutions for homes and businesses. We deliver spotless results you can trust.
+            Professional steam cleaning for carpets, sofas, mattresses, curtains and upholstery. We serve homes and businesses across the UK.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <a href="#contact">
+            <a href="/contact">
               <Button size="lg" className="gap-2 text-base px-8 py-6 rounded-xl shadow-lg">
-                Request A Quote <ArrowRight className="w-5 h-5" />
+                Get a Free Quote <ArrowRight className="w-5 h-5" />
               </Button>
             </a>
             <a href="#services">
               <button className="inline-flex items-center gap-2 text-base px-8 py-3 rounded-xl glass-dark text-white hover:bg-white/15 transition-all font-medium">
-                Our Services
+                View Our Services
               </button>
             </a>
           </div>
@@ -59,9 +59,9 @@ export default function Hero() {
             className="mt-12 flex gap-8 md:gap-12"
           >
             {[
-              { num: "500+", label: "Happy Clients" },
               { num: "15+", label: "Years Experience" },
-              { num: "100%", label: "Satisfaction" },
+              { num: "UK-Wide", label: "Coverage" },
+              { num: "24/7", label: "Availability" },
             ].map((s, i) => (
               <div key={i}>
                 <p className="text-2xl md:text-3xl font-bold text-white">{s.num}</p>

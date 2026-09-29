@@ -13,7 +13,7 @@ const benefits = [
   { title: "Experienced & Professional Team", detail: "Years of hands-on experience across residential and commercial properties throughout the UK." },
   { title: "Flexible Appointments", detail: "We work around your schedule. Same-day and next-day bookings available 24/7, all week." },
   { title: "Fully Insured & Vetted Staff", detail: "All team members are DBS checked, fully insured and professionally trained." },
-  { title: "100% Satisfaction Guarantee", detail: "Not happy with the result? We return and re-clean at absolutely no extra charge." },
+  { title: "Your Satisfaction Matters", detail: "Not completely satisfied with the result? We will return to re-clean at no extra charge." },
 ];
 
 const coverageImages = [
@@ -61,10 +61,10 @@ export default function WhyChooseUs() {
           >
             <p className="text-primary font-semibold text-sm tracking-[0.15em] uppercase mb-3">Why Choose Us</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-5 leading-tight">
-              We Care About Your<br />Hygiene & Comfort
+              Why Choose Luxora<br />Steam Cleaning
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              We use advanced steam cleaning technology and eco-friendly products to deliver a healthier and cleaner environment for you and your family.
+              We use advanced steam cleaning technology and eco-friendly products to deliver a healthier, cleaner environment for your home or business.
             </p>
 
             {/* Benefits */}
@@ -103,9 +103,9 @@ export default function WhyChooseUs() {
               </div>
             </div>
 
-            <a href="#contact">
+            <a href="/contact">
               <Button size="lg" className="gap-2 rounded-xl shadow-md">
-                Get A Quote <ArrowRight className="w-5 h-5" />
+                Get A Free Quote <ArrowRight className="w-5 h-5" />
               </Button>
             </a>
           </motion.div>
