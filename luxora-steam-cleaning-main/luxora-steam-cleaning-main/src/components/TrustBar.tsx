@@ -12,14 +12,14 @@ const items = [
 
 export default function TrustBar() {
   return (
-    <section id="trust" className="relative z-10 px-6 -mt-20 md:-mt-16">
+    <section id="trust" className="relative z-10 px-6 py-8">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className="container mx-auto max-w-5xl"
       >
-        <div className="bg-primary rounded-2xl p-6 md:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 shadow-xl">
+        <div className="bg-primary rounded-2xl p-6 md:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 shadow-lg">
           {items.map((item, i) => (
             <div key={i} className="flex items-center gap-3 text-primary-foreground">
               <div className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center shrink-0 border border-white/10">
