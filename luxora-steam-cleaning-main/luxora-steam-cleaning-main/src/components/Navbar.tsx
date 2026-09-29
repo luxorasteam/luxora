@@ -7,7 +7,6 @@ import { LuxoraLogo } from "./Icons";
 import ThemeToggle from "./ThemeToggle";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 interface CityLink {
   label: string;
@@ -55,16 +54,11 @@ export default function Navbar() {
   const [dropdownOpen, setDropdownOpen]       = useState(false);
   const [activeSubmenu, setActiveSubmenu]     = useState<string | null>(null);
   const [mobileCityOpen, setMobileCityOpen]   = useState<string | null>(null);
-  const pathname = usePathname();
-  const isHome = pathname === "/";
-
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  const anchor = (hash: string) => (isHome ? hash : `/${hash}`);
 
   const toggleMobileCity = (slug: string) =>
     setMobileCityOpen((prev) => (prev === slug ? null : slug));
@@ -187,9 +181,9 @@ export default function Navbar() {
               </AnimatePresence>
             </div>
 
-            <a href={anchor("#why-choose-us")} className="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors">About Us</a>
-            <a href={anchor("#gallery")}       className="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors">Gallery</a>
-            <a href={anchor("#contact")}       className="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors">Contact</a>
+            <Link href="/about-us" className="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors">About Us</Link>
+            <Link href="/gallery"  className="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors">Gallery</Link>
+            <Link href="/contact"  className="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors">Contact</Link>
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
@@ -197,9 +191,9 @@ export default function Navbar() {
             <a href="tel:07543958332">
               <Button variant="outline" size="sm" className="gap-2 rounded-xl"><Phone className="w-4 h-4" /> Call Now</Button>
             </a>
-            <a href={anchor("#contact")}>
+            <Link href="/contact">
               <Button size="sm" className="rounded-xl shadow-md">Get Free Quote</Button>
-            </a>
+            </Link>
           </div>
 
           {/* Mobile hamburger */}
@@ -282,13 +276,13 @@ export default function Navbar() {
                   ))}
                 </div>
 
-                <a href={anchor("#why-choose-us")} onClick={() => setMobileOpen(false)} className="block text-base font-semibold text-foreground/70 hover:text-primary py-2">About Us</a>
-                <a href={anchor("#gallery")}       onClick={() => setMobileOpen(false)} className="block text-base font-semibold text-foreground/70 hover:text-primary py-2">Gallery</a>
-                <a href={anchor("#contact")}       onClick={() => setMobileOpen(false)} className="block text-base font-semibold text-foreground/70 hover:text-primary py-2">Contact</a>
+                <Link href="/about-us" onClick={() => setMobileOpen(false)} className="block text-base font-semibold text-foreground/70 hover:text-primary py-2">About Us</Link>
+                <Link href="/gallery"  onClick={() => setMobileOpen(false)} className="block text-base font-semibold text-foreground/70 hover:text-primary py-2">Gallery</Link>
+                <Link href="/contact"  onClick={() => setMobileOpen(false)} className="block text-base font-semibold text-foreground/70 hover:text-primary py-2">Contact</Link>
 
                 <div className="pt-4 flex flex-col gap-3">
                   <a href="tel:07543958332"><Button variant="outline" className="w-full gap-2 rounded-xl"><Phone className="w-4 h-4" /> Call Now</Button></a>
-                  <a href={anchor("#contact")} onClick={() => setMobileOpen(false)}><Button className="w-full rounded-xl">Get Free Quote</Button></a>
+                  <Link href="/contact" onClick={() => setMobileOpen(false)}><Button className="w-full rounded-xl">Get Free Quote</Button></Link>
                 </div>
               </div>
             </motion.div>
