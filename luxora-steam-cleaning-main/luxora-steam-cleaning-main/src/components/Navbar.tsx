@@ -30,22 +30,22 @@ const serviceLinks: ServiceLink[] = [
   {
     label: "Sofa Cleaning",
     slug: "sofa-cleaning",
-    cities: [{ label: "Huddersfield", href: "/sofa-cleaning-huddersfield", available: false }],
+    cities: [{ label: "Huddersfield", href: "/sofa-cleaning-huddersfield", available: true }],
   },
   {
     label: "Mattress Cleaning",
     slug: "mattress-cleaning",
-    cities: [{ label: "Huddersfield", href: "/mattress-cleaning-huddersfield", available: false }],
+    cities: [{ label: "Huddersfield", href: "/mattress-cleaning-huddersfield", available: true }],
   },
   {
     label: "Curtain Cleaning",
     slug: "curtain-cleaning",
-    cities: [{ label: "Huddersfield", href: "/curtain-cleaning-huddersfield", available: false }],
+    cities: [{ label: "Huddersfield", href: "/curtain-cleaning-huddersfield", available: true }],
   },
   {
     label: "Chair & Dining Cleaning",
     slug: "chair-dining-cleaning",
-    cities: [{ label: "Huddersfield", href: "/chair-dining-cleaning-huddersfield", available: false }],
+    cities: [{ label: "Huddersfield", href: "/chair-dining-cleaning-huddersfield", available: true }],
   },
 ];
 
