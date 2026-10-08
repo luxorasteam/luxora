@@ -183,6 +183,7 @@ export default function Navbar() {
 
             <Link href="/about-us" className="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors">About Us</Link>
             <Link href="/gallery"  className="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors">Gallery</Link>
+            <Link href="/blog"     className="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors">Blog</Link>
             <Link href="/contact"  className="text-sm font-semibold text-foreground/70 hover:text-primary transition-colors">Contact</Link>
           </div>
 
@@ -278,6 +279,7 @@ export default function Navbar() {
 
                 <Link href="/about-us" onClick={() => setMobileOpen(false)} className="block text-base font-semibold text-foreground/70 hover:text-primary py-2">About Us</Link>
                 <Link href="/gallery"  onClick={() => setMobileOpen(false)} className="block text-base font-semibold text-foreground/70 hover:text-primary py-2">Gallery</Link>
+                <Link href="/blog"     onClick={() => setMobileOpen(false)} className="block text-base font-semibold text-foreground/70 hover:text-primary py-2">Blog</Link>
                 <Link href="/contact"  onClick={() => setMobileOpen(false)} className="block text-base font-semibold text-foreground/70 hover:text-primary py-2">Contact</Link>
 
                 <div className="pt-4 flex flex-col gap-3">
