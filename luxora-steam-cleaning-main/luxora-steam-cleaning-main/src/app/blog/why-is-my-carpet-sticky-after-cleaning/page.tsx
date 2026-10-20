@@ -120,15 +120,7 @@ export default function BlogPostPage() {
               footstep.
             </p>
             <p className="text-foreground/70 leading-relaxed">
-              This is especially common with over-the-counter{" "}
-              <a
-                href="https://www.which.co.uk/reviews/carpet-cleaners/article/best-carpet-cleaners"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:underline"
-              >
-                carpet cleaning machines
-              </a>{" "}
+              This is especially common with over-the-counter carpet cleaning machines
               and spray-on foam products. Most consumer machines do not have the water pressure
               or extraction power to fully remove the lather they create, and spray foams are
               designed to be vacuumed rather than rinsed — but if you apply too much, vacuuming
