@@ -43,7 +43,7 @@ export default function Hero() {
 
           {/* H1 — exactly two lines */}
           <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-white leading-[1.1] mb-5">
-            Steam Cleaning Services for<br />
+            Steam Cleaning Services<br />
             <span className="bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent">
               Homes &amp; Businesses
             </span>
