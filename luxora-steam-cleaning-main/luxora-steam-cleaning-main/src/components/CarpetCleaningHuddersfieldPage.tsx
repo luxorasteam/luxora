@@ -18,7 +18,7 @@ function Paragraphs({ items }: { items: string[] }) {
   return <>{items.map((text) => <p key={text} className="text-muted-foreground leading-relaxed mb-4 last:mb-0">{text}</p>)}</>;
 }
 function Photo({ name, alt }: { name: string; alt: string }) {
-  return <img src={`/images/huddersfield/${name}.webp`} alt={alt} width={1400} height={788} loading="lazy" decoding="async" className="w-full rounded-2xl shadow-lg object-cover aspect-video" />;
+  return <img src={`/images/huddersfield/${name}.webp`} alt={alt} width={1400} height={788} loading="lazy" decoding="async" className="w-full rounded-2xl shadow-lg object-cover aspect-video lg:aspect-auto lg:h-full lg:min-h-0" />;
 }
 function QuoteButton() {
   return <a href="#contact"><Button size="lg" className="gap-2 rounded-xl px-8">Get a Free Quote <ArrowRight className="w-5 h-5" /></Button></a>;
@@ -40,7 +40,6 @@ export default function CarpetCleaningHuddersfieldPage() {
      <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-5 max-w-3xl">Professional Carpet Cleaning in Huddersfield</h1>
      <div className="text-white/85 leading-relaxed max-w-2xl space-y-4 mb-8">
       <p>Looking for reliable <strong>carpet cleaning in Huddersfield</strong>? Luxora Steam Cleaning provides deep carpet cleaning for homes, landlords and businesses across Huddersfield and nearby areas.</p>
-      <p>We help refresh carpets affected by everyday dirt, spills, pet use, muddy foot traffic and general wear. Our cleaning approach depends on the carpet type, condition and level of soiling.</p>
       <p>Whether you need one room cleaned or several carpets throughout a property, our local team can help.</p>
      </div>
      <div className="flex flex-wrap gap-4 items-center"><QuoteButton /><a href="tel:07543958332" className="inline-flex items-center gap-2 text-white px-5 py-3 rounded-xl border border-white/30"><Phone className="w-4 h-4" />07543 958332</a></div>
@@ -49,28 +48,28 @@ export default function CarpetCleaningHuddersfieldPage() {
    <section className="py-16 md:py-24"><div className="container mx-auto px-6 max-w-6xl">
     <h2 className="text-3xl md:text-4xl font-extrabold mb-5">Common Carpet Problems We Treat in Huddersfield</h2>
     <div className="max-w-3xl mb-10"><Paragraphs items={["Carpets can collect dirt and marks in different ways depending on how the room is used.","Our carpet cleaning services in Huddersfield can help with many common carpet problems."]} /></div>
-    <div className="grid md:grid-cols-2 gap-6">
-     {problems.map(([title, paragraphs], i) => <article key={title as string} className="glass-card rounded-2xl p-6 md:p-8 shadow-sm">
-      <h3 className="text-xl font-bold mb-4">{title}</h3><Paragraphs items={paragraphs as string[]} />
-      {i === 0 && <div className="mt-6"><Photo name="carpet-stain-removal-huddersfield" alt="Targeted treatment of a carpet stain using a brush and cloth" /></div>}
-     </article>)}
-    </div>
+    <ul className="space-y-7">
+     {problems.map(([title, paragraphs]) => <li key={title as string} className="flex items-start gap-4">
+      <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-1" />
+      <div><h3 className="text-xl font-bold mb-3">{title}</h3><Paragraphs items={paragraphs as string[]} /></div>
+     </li>)}
+    </ul>
    </div></section>
-   <section className="py-16 md:py-24 bg-accent/30"><div className="container mx-auto px-6 max-w-6xl grid lg:grid-cols-2 gap-10 items-center">
+   <section className="py-16 md:py-24 bg-accent/30"><div className="container mx-auto px-6 max-w-6xl grid lg:grid-cols-2 gap-10 items-stretch">
     <div><h2 className="text-3xl md:text-4xl font-extrabold mb-6">Why Huddersfield Carpets Need Regular Deep Cleaning</h2>
      <Paragraphs items={["Living in Huddersfield means carpets often deal with changing West Yorkshire weather.","Wet days can mean more moisture, grit and mud being carried into homes on shoes. Entrances, hallways, stairs and living rooms can collect this dirt quickly, especially in busy households.","Older terraces and family homes can also have heavily used carpeted stairs and landings where dirt becomes more noticeable over time.","Rental properties and student accommodation may need deeper carpet cleaning between occupants, while offices and businesses can experience heavier daily foot traffic.","Regular vacuuming is important, but it mainly deals with loose surface dirt.","A professional carpet cleaner in Huddersfield can provide a deeper clean when dirt has settled further into the fibres.","For suitable carpets, steam carpet cleaning in Huddersfield can help lift built-up dirt and refresh areas that have become heavily used."]} />
-    </div><Photo name="muddy-carpet-deep-cleaning-huddersfield" alt="Deep extraction cleaning of muddy footprints on a hallway carpet" />
+    </div><div className="lg:relative lg:min-h-[480px] [&>img]:lg:absolute [&>img]:lg:inset-0"><Photo name="muddy-carpet-deep-cleaning-huddersfield" alt="Deep extraction cleaning of muddy footprints on a hallway carpet" /></div>
    </div></section>
    <section className="py-16 md:py-24"><div className="container mx-auto px-6 max-w-6xl">
     <h2 className="text-3xl md:text-4xl font-extrabold mb-5">Our Carpet Cleaning Process</h2><p className="text-muted-foreground mb-10">We keep our process simple and practical.</p>
     <div className="grid md:grid-cols-2 gap-6">{process.map(([title, paragraphs]) => <article key={title as string} className="glass-card rounded-2xl p-6 md:p-8"><h3 className="text-xl font-bold mb-4">{title}</h3><Paragraphs items={paragraphs as string[]} /></article>)}</div>
    </div></section>
-   <section className="py-16 md:py-24 bg-accent/30"><div className="container mx-auto px-6 max-w-6xl grid lg:grid-cols-2 gap-10 items-center">
+   <section className="py-16 md:py-24 bg-accent/30"><div className="container mx-auto px-6 max-w-6xl grid lg:grid-cols-2 gap-10 items-stretch">
     <div><h2 className="text-3xl md:text-4xl font-extrabold mb-6">Areas We Cover Around Huddersfield</h2>
      <Paragraphs items={["Luxora Steam Cleaning provides carpet cleaning services in Huddersfield and surrounding areas.","We work with customers in houses, flats, rental properties and suitable commercial premises.","Our local service can include:"]} />
      <ul className="grid sm:grid-cols-2 gap-3 my-6">{["Living rooms","Bedrooms","Hallways","Stairs and landings","Flats and apartments","Rental properties","Offices","Shops","Other suitable business premises"].map(room => <li key={room} className="flex gap-2 items-start"><CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-1" />{room}</li>)}</ul>
      <Paragraphs items={["If you are unsure whether we cover your exact area or postcode, contact us with your location and we can confirm availability.","As we expand our local coverage, we only want to list areas we genuinely serve rather than adding place names purely for SEO."]} />
-    </div><Photo name="staircase-carpet-cleaning-huddersfield" alt="Technician cleaning carpeted stairs with an upholstery extraction tool" />
+    </div><div className="lg:relative lg:min-h-[480px] [&>img]:lg:absolute [&>img]:lg:inset-0"><Photo name="staircase-carpet-cleaning-huddersfield" alt="Technician cleaning carpeted stairs with an upholstery extraction tool" /></div>
    </div></section>
    <section className="py-16 md:py-24"><div className="container mx-auto px-6 max-w-6xl">
     <h2 className="text-3xl md:text-4xl font-extrabold mb-5">Why Choose Luxora for Carpet Cleaning in Huddersfield?</h2>
