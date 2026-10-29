@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${BASE_URL}/images/services/carpet-services-section.jpg`,
-        width: 1152,
-        height: 896,
+        url: `${BASE_URL}/images/huddersfield/carpet-cleaning-huddersfield.webp`,
+        width: 1400,
+        height: 788,
         alt: "Professional carpet cleaning in Huddersfield by Luxora Steam Cleaning",
       },
     ],
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description:
       "Professional carpet cleaning in Huddersfield for homes and businesses. Deep cleaning, stain treatment and local service. Get a free quote.",
     images: [{
-      url: `${BASE_URL}/images/services/carpet-services-section.jpg`,
+      url: `${BASE_URL}/images/huddersfield/carpet-cleaning-huddersfield.webp`,
       alt: "Professional carpet cleaning in Huddersfield by Luxora Steam Cleaning",
     }],
   },
@@ -81,63 +81,55 @@ const jsonLd = {
     {
       "@type": "FAQPage",
       mainEntity: [
-        {
-          "@type": "Question",
-          name: "How much does carpet cleaning cost in Huddersfield?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "The price depends on factors such as the number and size of rooms, carpet condition and whether there are stains or areas requiring extra treatment. Contact Luxora for a free quote based on your property.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How long do carpets take to dry after cleaning?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Drying time varies depending on the carpet material, room ventilation, temperature and cleaning required. Many carpets typically dry within approximately 2 to 4 hours, although some may take longer.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Can you remove every carpet stain?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "No professional carpet cleaner can responsibly guarantee removal of every stain. Results depend on what caused the stain, how long it has been present, previous treatments and the carpet fibres. We assess stains and aim for the best safe result possible.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Do you clean carpets in homes with pets?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. We clean carpets in homes with pets and can pay additional attention to pet-related marks, hair and problem areas.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Do you offer commercial carpet cleaning in Huddersfield?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. We can provide carpet cleaning for suitable offices and commercial properties as well as residential homes.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Can I book carpet and sofa cleaning together?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. Luxora offers both carpet and sofa cleaning. Tell us which items you need cleaned when requesting your quote so the work can be planned together.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Which parts of Huddersfield do you cover?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "We provide carpet cleaning across Huddersfield and nearby areas. Send us your postcode if you would like us to confirm coverage for your property.",
-          },
-        },
-      ],
+  {
+    "@type": "Question",
+    "name": "How much does carpet cleaning cost in Huddersfield?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The cost of carpet cleaning in Huddersfield depends on factors such as the number and size of rooms, carpet condition and whether there are stains or heavily used areas requiring extra attention. Contact Luxora for a tailored quote based on your property."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "How long do carpets take to dry after cleaning?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Drying time varies depending on the carpet material, room temperature, ventilation and cleaning method used. We will provide suitable drying guidance after the work is complete."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "Can you remove old carpet stains?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We can treat many common stains, but no responsible carpet cleaning company in Huddersfield should guarantee that every stain will disappear completely. Results depend on the stain type, how long it has been present, the carpet fibres and any previous treatments."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "Do you clean carpets in homes with pets?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. We clean carpets in homes with pets and can pay extra attention to areas affected by pet hair, muddy marks and suitable pet-related stains. Let us know about any specific problem areas when requesting your quote."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "Do you clean stairs and landings?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Carpeted stairs and landings are often some of the busiest areas in a home. They can be included as part of your house carpet cleaning in Huddersfield."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "Which areas of Huddersfield do you cover?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We provide local carpet cleaning in Huddersfield and nearby areas. Send us your postcode when requesting a quote and we can confirm whether your property is within our current service area."
+    }
+  }
+],
     },
   ],
 };
