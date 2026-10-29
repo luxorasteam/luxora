@@ -1,31 +1,41 @@
 import type { Metadata } from "next";
 import CarpetCleaningHuddersfieldPage from "@/components/CarpetCleaningHuddersfieldPage";
 
-const BASE_URL = "https://luxorasteamcleaning.co.uk";
+const BASE_URL = "https://www.luxorastreamcleaning.co.uk";
 const PAGE_PATH = "/carpet-cleaning-huddersfield";
 
 export const metadata: Metadata = {
   title: "Carpet Cleaning Huddersfield | Luxora Steam Cleaning",
   description:
-    "Professional carpet cleaning in Huddersfield for homes and businesses. Deep cleaning, stain treatment and flexible appointments. Get a free quote.",
+    "Professional carpet cleaning in Huddersfield for homes and businesses. Deep cleaning, stain treatment and local service. Get a free quote.",
   alternates: {
     canonical: `${BASE_URL}${PAGE_PATH}`,
   },
   openGraph: {
     title: "Carpet Cleaning Huddersfield | Luxora Steam Cleaning",
     description:
-      "Professional carpet cleaning in Huddersfield for homes and businesses. Deep cleaning, stain treatment and flexible appointments. Get a free quote.",
+      "Professional carpet cleaning in Huddersfield for homes and businesses. Deep cleaning, stain treatment and local service. Get a free quote.",
     url: `${BASE_URL}${PAGE_PATH}`,
     siteName: "Luxora Steam Cleaning",
     type: "website",
     images: [
       {
         url: `${BASE_URL}/images/services/carpet-services-section.jpg`,
-        width: 1200,
-        height: 630,
+        width: 1152,
+        height: 896,
         alt: "Professional carpet cleaning in Huddersfield by Luxora Steam Cleaning",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Carpet Cleaning Huddersfield | Luxora Steam Cleaning",
+    description:
+      "Professional carpet cleaning in Huddersfield for homes and businesses. Deep cleaning, stain treatment and local service. Get a free quote.",
+    images: [{
+      url: `${BASE_URL}/images/services/carpet-services-section.jpg`,
+      alt: "Professional carpet cleaning in Huddersfield by Luxora Steam Cleaning",
+    }],
   },
 };
 
@@ -50,7 +60,9 @@ const jsonLd = {
     },
     {
       "@type": "Service",
-      name: "Carpet Cleaning Huddersfield",
+      "@id": `${BASE_URL}${PAGE_PATH}#service`,
+      name: "Carpet Cleaning in Huddersfield",
+      url: `${BASE_URL}${PAGE_PATH}`,
       provider: { "@id": `${BASE_URL}/#business` },
       serviceType: "Carpet Cleaning",
       areaServed: { "@type": "City", name: "Huddersfield" },
@@ -61,9 +73,9 @@ const jsonLd = {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
-        { "@type": "ListItem", position: 2, name: "Service Areas", item: `${BASE_URL}/service-areas` },
-        { "@type": "ListItem", position: 3, name: "Huddersfield", item: `${BASE_URL}/service-areas/huddersfield` },
-        { "@type": "ListItem", position: 4, name: "Carpet Cleaning", item: `${BASE_URL}${PAGE_PATH}` },
+        { "@type": "ListItem", position: 2, name: "Services", item: `${BASE_URL}/services` },
+        { "@type": "ListItem", position: 3, name: "Carpet Cleaning", item: `${BASE_URL}/services/carpet-cleaning` },
+        { "@type": "ListItem", position: 4, name: "Carpet Cleaning Huddersfield", item: `${BASE_URL}${PAGE_PATH}` },
       ],
     },
     {
