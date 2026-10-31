@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { services } from "@/data/services";
 
-const BASE_URL = "https://luxorasteamcleaning.co.uk";
+const BASE_URL = "https://www.luxorastreamcleaning.co.uk";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const servicePages = services.map((s) => ({
