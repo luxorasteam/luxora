@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import AboutUsPage from "@/components/AboutUsPage";
 
-const BASE_URL = "https://luxorasteamcleaning.co.uk";
+const BASE_URL = "https://www.luxorastreamcleaning.co.uk";
 
 export const metadata: Metadata = {
-  title: "About Us | Luxora Steam Cleaning Ltd — Professional Cleaners in Huddersfield",
+  title: "About Luxora Steam Cleaning | Our Story & Team",
   description:
-    "Learn about Luxora Steam Cleaning Ltd — 15+ years of professional steam cleaning experience across the UK. Fully insured, eco-friendly, 100% satisfaction guaranteed.",
+    "Meet Luxora Steam Cleaning Ltd, a Huddersfield-based team with over 15 years of industry experience. Learn about our story, values and careful approach.",
   alternates: { canonical: `${BASE_URL}/about-us` },
   openGraph: {
     title: "About Us | Luxora Steam Cleaning Ltd",
     description:
-      "15+ years of professional steam cleaning across Huddersfield and the UK. Eco-friendly, fully insured, satisfaction guaranteed.",
+      "Learn about our story, experienced team and commitment to careful service, honest advice and clear communication.",
     url: `${BASE_URL}/about-us`,
     siteName: "Luxora Steam Cleaning Ltd",
     type: "website",
@@ -28,16 +28,16 @@ export default function Page() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "WebPage",
+                "@type": "AboutPage",
                 "@id": `${BASE_URL}/about-us`,
                 url: `${BASE_URL}/about-us`,
-                name: "About Us",
+                name: "About Luxora Steam Cleaning",
                 isPartOf: { "@id": BASE_URL },
                 breadcrumb: {
                   "@type": "BreadcrumbList",
                   itemListElement: [
                     { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
-                    { "@type": "ListItem", position: 2, name: "About Us", item: `${BASE_URL}/about-us` },
+                    { "@type": "ListItem", position: 2, name: "About Luxora Steam Cleaning", item: `${BASE_URL}/about-us` },
                   ],
                 },
               },
@@ -48,9 +48,8 @@ export default function Page() {
                 url: BASE_URL,
                 telephone: "+447543958332",
                 email: "Steamcleaningserviceltd@gmail.com",
-                foundingDate: "2009",
                 description:
-                  "Professional steam cleaning services for carpets, sofas, mattresses, curtains and upholstery across Huddersfield and the UK.",
+                  "UK-based cleaning company focused on careful, reliable service for homes and businesses, with more than 15 years of industry experience.",
                 address: {
                   "@type": "PostalAddress",
                   streetAddress: "24 Thornhill Avenue",
@@ -58,10 +57,7 @@ export default function Page() {
                   postalCode: "HD3 3DR",
                   addressCountry: "GB",
                 },
-                areaServed: [
-                  "Huddersfield", "Leeds", "Manchester", "Bradford", "Sheffield",
-                  "Liverpool", "York", "Hull", "Nottingham", "Newcastle",
-                ],
+                areaServed: { "@type": "Country", name: "United Kingdom" },
               },
             ],
           }),
