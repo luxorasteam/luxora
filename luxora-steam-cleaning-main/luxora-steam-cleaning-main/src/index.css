@@ -1,5 +1,4 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -44,7 +43,7 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 221 83% 40%;
 
-    --font-sans: 'Manrope', 'Inter', sans-serif;
+    --font-sans: var(--font-manrope), Arial, sans-serif;
     --font-mono: 'Courier New', monospace;
 
     --shadow-x: 0px;

@@ -1,6 +1,5 @@
-"use client";
-
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Phone, ChevronRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "./Navbar";
@@ -18,7 +17,7 @@ function Paragraphs({ items }: { items: string[] }) {
   return <>{items.map((text) => <p key={text} className="text-muted-foreground leading-relaxed mb-4 last:mb-0">{text}</p>)}</>;
 }
 function Photo({ name, alt }: { name: string; alt: string }) {
-  return <img src={`/images/huddersfield/${name}.webp`} alt={alt} width={1400} height={788} loading="lazy" decoding="async" className="w-full rounded-2xl shadow-lg object-cover aspect-video lg:aspect-auto lg:h-full lg:min-h-0" />;
+  return <Image sizes="(min-width: 1024px) 550px, 100vw" src={`/images/huddersfield/${name}.webp`} alt={alt} width={1400} height={788} loading="lazy" decoding="async" className="w-full rounded-2xl shadow-lg object-cover aspect-video lg:aspect-auto lg:h-full lg:min-h-0" />;
 }
 function QuoteButton() {
   return <a href="#contact"><Button size="lg" className="gap-2 rounded-xl px-8">Get a Free Quote <ArrowRight className="w-5 h-5" /></Button></a>;
@@ -28,7 +27,7 @@ export default function CarpetCleaningHuddersfieldPage() {
   <Navbar />
   <main>
    <section className="relative overflow-hidden">
-    <img src="/images/huddersfield/carpet-cleaning-huddersfield.webp" alt="Carpet extraction cleaning in a Huddersfield living room" width={1400} height={788} fetchPriority="high" loading="eager" className="absolute inset-0 w-full h-full object-cover" />
+    <Image sizes="100vw" priority src="/images/huddersfield/carpet-cleaning-huddersfield.webp" alt="Carpet extraction cleaning in a Huddersfield living room" width={1400} height={788} fetchPriority="high" loading="eager" className="absolute inset-0 w-full h-full object-cover" />
     <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/30" />
     <div className="relative px-6 md:px-12 lg:px-20 max-w-7xl mx-auto py-12 md:py-20">
      <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-white/70 text-xs mb-6 flex-wrap">
