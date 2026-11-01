@@ -24,6 +24,26 @@ export default function Hero() {
 
       {/* Content — starts close to top, clear of the nav */}
       <div className="relative flex flex-col justify-start min-h-screen px-6 md:px-12 lg:px-20 max-w-7xl mx-auto pt-10 md:pt-12 pb-16">
+        {/* Review link stays in normal flow on small screens to avoid overlaps. */}
+        <a
+          href="https://maps.app.goo.gl/tsaog2QXLD8fisaA9"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Read Luxora Steam Cleaning reviews on Google (opens in a new tab)"
+          className="mb-8 self-end max-w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 shadow-md transition-shadow hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-400"
+        >
+          <span className="block text-xs sm:text-sm font-extrabold uppercase tracking-wider">
+            Luxora Steam Cleaning
+          </span>
+          <span className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+            <span aria-label="Google" className="font-bold">
+              <span aria-hidden="true">
+                <span className="text-[#4285F4]">G</span><span className="text-[#EA4335]">o</span><span className="text-[#FBBC05]">o</span><span className="text-[#4285F4]">g</span><span className="text-[#34A853]">l</span><span className="text-[#EA4335]">e</span>
+              </span>
+            </span>
+            <span className="text-slate-600 underline underline-offset-2">Read our Google reviews</span>
+          </span>
+        </a>
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
