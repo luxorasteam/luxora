@@ -29,8 +29,8 @@ export default function Hero() {
           href="https://maps.app.goo.gl/tsaog2QXLD8fisaA9"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Read Luxora Steam Cleaning reviews on Google (opens in a new tab)"
-          className="mb-8 self-end max-w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 shadow-md transition-shadow hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-400"
+          aria-label="Luxora Steam Cleaning: rated 5.0 out of 5 from 289 Google reviews (opens in a new tab)"
+          className="mb-6 self-end max-w-full xl:absolute xl:right-20 xl:top-12 xl:mb-0 rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 shadow-md transition-shadow hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-400"
         >
           <span className="block text-xs sm:text-sm font-extrabold uppercase tracking-wider">
             Luxora Steam Cleaning
@@ -41,7 +41,9 @@ export default function Hero() {
                 <span className="text-[#4285F4]">G</span><span className="text-[#EA4335]">o</span><span className="text-[#FBBC05]">o</span><span className="text-[#4285F4]">g</span><span className="text-[#34A853]">l</span><span className="text-[#EA4335]">e</span>
               </span>
             </span>
-            <span className="text-slate-600 underline underline-offset-2">Read our Google reviews</span>
+            <span className="font-bold">5.0</span>
+            <span aria-hidden="true" className="text-amber-500 tracking-tight">★★★★★</span>
+            <span className="text-slate-600 underline underline-offset-2">289 Google reviews</span>
           </span>
         </a>
         <motion.div
